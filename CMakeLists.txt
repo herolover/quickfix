@@ -92,6 +92,6 @@ elseif (HAVE_PYTHON3)
   include_directories(${PYTHON_INCLUDE_DIRS})
 endif ()
 
-add_subdirectory(src/C++)
-
 configure_file(cmake_config.h.in ${CMAKE_CURRENT_SOURCE_DIR}/src/C++/config.h @ONLY)
+
+add_subdirectory(src/C++)
