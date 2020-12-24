@@ -103,6 +103,3 @@ add_subdirectory(test)
 endif()
 
 configure_file(cmake_config.h.in ${CMAKE_CURRENT_SOURCE_DIR}/src/C++/config.h @ONLY)
-
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/spec/ DESTINATION share/quickfix
-  FILES_MATCHING PATTERN "FIX*.xml")

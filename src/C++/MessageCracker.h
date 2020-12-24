@@ -22,6 +22,10 @@
 #ifndef FIX_MESSAGECRACKER_H
 #define FIX_MESSAGECRACKER_H
 
+#ifdef __clang__
+#pragma clang diagnostic ignored "-Woverloaded-virtual"
+#endif
+
 #include "fix40/MessageCracker.h"
 #include "fix41/MessageCracker.h"
 #include "fix42/MessageCracker.h"
