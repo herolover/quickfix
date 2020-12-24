@@ -19,10 +19,9 @@ if( CMAKE_CXX_STANDARD EQUAL 17 )
   option( HAVE_CXX17 "Using C++17" ON)
 endif()
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
 
 include(QuickfixPlatformSettings)
-include(QuickfixPrebuildSetup)
 
 # Call cmake with-DHAVE_SSL=ON to compile with SSL. Similarly for others.
 option(HAVE_SSL "Build with SSL")
@@ -103,7 +102,7 @@ if( WIN32)
 add_subdirectory(test)
 endif()
 
-configure_file(cmake_config.h.in ${CMAKE_SOURCE_DIR}/src/C++/config.h @ONLY)
+configure_file(cmake_config.h.in ${CMAKE_CURRENT_SOURCE_DIR}/src/C++/config.h @ONLY)
 
-install(DIRECTORY ${CMAKE_SOURCE_DIR}/spec/ DESTINATION share/quickfix
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/spec/ DESTINATION share/quickfix
   FILES_MATCHING PATTERN "FIX*.xml")
